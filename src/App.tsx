@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle, camera, list, person } from 'ionicons/icons';
-import Liste from './pages/Liste';
+import Participants from './pages/Participants';
 import Scan from './pages/Scan';
 import Gestion_évenements from './pages/Gestion_évenements';
 
@@ -52,8 +52,8 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/Liste">
-            <Liste />
+          <Route exact path="/Participants">
+            <Participants />
           </Route>
           <Route exact path="/Scan">
             <Scan />
@@ -62,13 +62,13 @@ const App: React.FC = () => (
             <Gestion_évenements />
           </Route>
           <Route exact path="/">
-            <Redirect to="/Liste" />
+            <Redirect to="/Participants" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="Liste" href="/Liste">
+          <IonTabButton tab="Participants" href="/Participants">
             <IonIcon aria-hidden="true" icon={list} />
-            <IonLabel>Liste</IonLabel>
+            <IonLabel>Participants</IonLabel>
           </IonTabButton>
           <IonTabButton tab="Scan" href="/Scan">
             <IonIcon aria-hidden="true" icon={camera} />

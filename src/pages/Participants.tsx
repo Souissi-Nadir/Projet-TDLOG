@@ -1,25 +1,25 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Liste.css';
+import './Participants.css';
 
-const Liste: React.FC = () => {
+const Participants: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Liste</IonTitle>
+          <IonTitle>Participants</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Liste</IonTitle>
+            <IonTitle size="large">Participants</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Liste page" />
+        <ExploreContainer name="Participants page" />
       </IonContent>
     </IonPage>
   );
 };
 
-export default Liste;
+export default Participants;
