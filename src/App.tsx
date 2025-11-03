@@ -58,7 +58,7 @@ const App: React.FC = () => (
           <Route exact path="/Scan">
             <Scan />
           </Route>
-          <Route path="/tab3">
+          <Route path="/Gestion_évenement">
             <Gestion_évenement />
           </Route>
           <Route exact path="/">
