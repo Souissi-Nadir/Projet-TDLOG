@@ -45,7 +45,7 @@ import {
 } from '@ionic/react';
 import { trash, mail } from 'ionicons/icons';
 import Papa from 'papaparse';
-import QRCode from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 import './Participants.css';
 
 interface Participant {
@@ -170,7 +170,7 @@ const Participants: React.FC = () => {
                 <IonInput value={p.tarif} onIonChange={e => updateParticipant(p.id, 'tarif', e.detail.value!)} />
               </IonCol>
               <IonCol>
-                <QRCode value={p.qrCode!} size={64} />
+                <QRCodeCanvas value={p.qrCode!} size={64} />
               </IonCol>
               <IonCol>
                 <IonButton color="danger" onClick={() => deleteParticipant(p.id)}>
