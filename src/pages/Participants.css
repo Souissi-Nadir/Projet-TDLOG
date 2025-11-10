@@ -1,60 +1,142 @@
-/* Padding général pour le contenu */
-ion-content {
-  padding: 16px;
-  background-color: #f8f8f8;
+.participants-toolbar {
+  --background: var(--ion-color-primary);
+  --color: white;
 }
 
-/* Formulaire manuel */
-ion-item {
-  margin-bottom: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.participants-toolbar ion-title {
+  font-weight: 700;
 }
 
-ion-input {
-  margin-right: 8px;
-  min-width: 120px;
+.participants-toolbar-right {
+  gap: 12px;
 }
 
-/* Boutons */
-ion-button {
+.toolbar-selects {
+  --background: transparent;
   margin-left: 8px;
 }
 
-/* Grille / tableau récapitulatif */
-ion-grid {
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #fff;
+.toolbar-label {
+  color: white;
+  opacity: 0.9;
+  font-size: 12px;
+  margin-bottom: 2px;
 }
 
-ion-row {
+.participants-content {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 12px;
+}
+
+.event-title-wrap {
+  margin: 8px 6px 14px;
+}
+
+.event-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.block-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.manual-form-list ion-item {
+  --inner-padding-end: 8px;
+  --padding-start: 8px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: var(--ion-color-light);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.csv-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px dashed var(--ion-color-medium);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.csv-help {
+  margin-top: 8px;
+  color: var(--ion-color-medium);
+}
+
+/* Tableau lisible */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.participants-table {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+.table-header {
+  background: #f6f7fb;
+  font-weight: 700;
+  border-bottom: 1px solid #e4e6ee;
+}
+
+.table-row {
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row.odd {
+  background: #fafbff;
+}
+
+.participants-table ion-col {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
-  padding: 8px 0;
 }
 
-ion-row:first-child {
-  font-weight: bold;
-  background-color: #f0f0f0;
+/* Colonnes spécifiques */
+.col-tarif { max-width: 120px; }
+.col-qr { max-width: 100px; justify-content: center; }
+.col-actions {
+  white-space: nowrap;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
 }
 
-ion-col {
-  padding: 4px 8px;
-  flex: 1;
-  min-width: 80px;
+/* Inputs verrouillés (lecture seule) */
+ion-input.locked {
+  --color: #222;
+  --background: transparent;
+  pointer-events: none;
+  opacity: 0.9;
 }
 
-/* Boutons d’action dans le tableau */
-ion-col ion-button {
-  margin-right: 4px;
+.qr-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* QR code */
-ion-col canvas {
-  display: block;
-  margin: auto;
+@media (min-width: 992px) {
+  .manual-form-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 12px;
+  }
+  .manual-form-list .form-actions {
+    grid-column: 1 / -1;
+  }
 }
