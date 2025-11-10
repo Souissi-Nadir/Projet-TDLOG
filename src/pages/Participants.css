@@ -1,0 +1,60 @@
+/* Padding général pour le contenu */
+ion-content {
+  padding: 16px;
+  background-color: #f8f8f8;
+}
+
+/* Formulaire manuel */
+ion-item {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+ion-input {
+  margin-right: 8px;
+  min-width: 120px;
+}
+
+/* Boutons */
+ion-button {
+  margin-left: 8px;
+}
+
+/* Grille / tableau récapitulatif */
+ion-grid {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+ion-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+
+ion-row:first-child {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+ion-col {
+  padding: 4px 8px;
+  flex: 1;
+  min-width: 80px;
+}
+
+/* Boutons d’action dans le tableau */
+ion-col ion-button {
+  margin-right: 4px;
+}
+
+/* QR code */
+ion-col canvas {
+  display: block;
+  margin: auto;
+}
